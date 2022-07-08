@@ -161,7 +161,7 @@ h2{
 
 .button i{
    color: #04088a;
-   display: none;
+   /* display: none; */
 }
 
 @media (max-width:640px) {
@@ -266,7 +266,7 @@ h2{
 
    .button i{
       font-size: 70px;
-      display: initial;
+      /* display: initial; */
    }
 
    /* footer */
