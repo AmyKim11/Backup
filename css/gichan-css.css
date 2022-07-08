@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+
+
+
+div#wrap{
+  position: relative;
+  width: 100%;
+  height: 2400px;
+  background-color: white;
+}
+
+
+#top_btn{
+  position: fixed;
+  z-index: 99999;
+  bottom: 7%;
+  right: 5%;
+  display: flex;
+  background-color: transparent;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  scroll-behavior: smooth; /*버튼 부드럽게 애니메이션*/
+  transition: 0.8s ease;  /*버튼 생기는 속도 */
+
+
+}
+
+#top_btn.on{
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+#wrap img {
+  border-radius: 60%;
+  border: 2px solid gainsboro;
+  background: white;
+  cursor: pointer;
+  margin-bottom: 3px;
+  font-size:30px;
+  padding:3px 3px;
+  color:black;
+  
+}
+
+#top_btn p{
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -0.3px;
+  color: gray;
+}

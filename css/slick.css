@@ -1,0 +1,48 @@
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.wrap{
+    width: 1440px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.cont{
+    width: 330px;
+    height: 300px;
+    display: inline-block;
+    background-color: #fff;
+    margin: 0 10px;
+}
+
+.logo{
+    margin: 0 auto;
+    width: 80%;
+    height: 40%;
+
+    transition: all 0.2s linear;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    box-shadow: 0;
+}
+
+.work-title {
+    height: 30%;
+    font-size: 20px;
+    color: #222;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    line-height: 1.5;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.cont p{
+    word-break: keep-all;
+}
