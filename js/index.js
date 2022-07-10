@@ -81,7 +81,7 @@ function  clientsImagesClass () {
    
 
    function width940(){
-      for (let i = 0; i < clientsImg.length; i++) {
+      for (let i = 0; i < clientsImg.length-15; i++) {
             setTimeout(function () {
                clientsImg[i].style.opacity = 1;
             }, i * 200)
@@ -124,7 +124,6 @@ function  clientsImagesClass () {
       
       } else if(windowWidth < 941){
          width940();
-      
          startAni = false;
          buttonClickWidth1218(NONE, sNum2[0], sNum2[1]);
          console.log(windowWidth);
@@ -135,40 +134,39 @@ function  clientsImagesClass () {
       clientArray.push(clientsImg[b]);
    }
    
-   function resizeMiddle(){
-      if(windowWidth > 1218 ){
-         plusButton.style.fontSize = '70px';
-      console.log('글자');}
-   }
-
-  
    clientListAni();
-   
-
-   
 
    function buttonClickWidth1218(BLOCK, num1, num2) {
       let sliceArray = [];
       sliceArray = clientArray.slice(num1, num2);
-      console.log(sliceArray);
+      // console.log(sliceArray);
       for(let s = 0; s < sliceArray.length;s++){
       sliceArray[s].style.display = BLOCK;
     }
   
    }
 
-   // 플러스 버튼 눌렀을때 나머지 로고 표시
-   const clickButtonEvent = () => {
-      buttonClickWidth1218($BLOCK);
+   function hiddenAni(startNum){
       let e =1;
-      for(let v = 24;v<clientsImg.length;v++){
+      for(let v = startNum;v<clientsImg.length;v++){
          e++;
          setTimeout(function () {
             clientsImg[v].style.opacity = 1;
          }, e * 200)
       }
+   }
+
+   // 플러스 버튼 눌렀을때 나머지 로고 표시
+   const clickButtonEvent = () => {
+      buttonClickWidth1218($BLOCK);
+      if(windowWidth >= 941 && windowWidth <= 1218){
+         hiddenAni(24);
+      } else if(windowWidth < 941){
+         hiddenAni(12);
+      }
+ 
       // plusButton.classList.add('noshow');
-      console.log(clientsImg[26].style.display);
+      // console.log(clientsImg[26].style.display);
       if(clientsImg[26].style.display == 'block'){
          console.log('여기');
          plusButton.style.display = 'none';
