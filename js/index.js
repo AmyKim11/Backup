@@ -134,10 +134,16 @@ function  clientsImagesClass () {
    for(let b=0;b<clientsImg.length;b++){
       clientArray.push(clientsImg[b]);
    }
-  
+   
+   function resizeMiddle(){
+      if(windowWidth > 1218 ){
+         plusButton.style.fontSize = '70px';
+      console.log('글자');}
+   }
+
   
    clientListAni();
-   window.addEventListener("resize", clientListAni);
+   
 
    
 
@@ -177,5 +183,6 @@ function  clientsImagesClass () {
    plusButton.addEventListener("click", clickButtonEvent);
    // window.addEventListener("resize", clientListAni);
    // plusButton.removeEventListener("click", clickButtonEvent);
+   // window.addEventListener("resize", resizeMiddle);
    window.clearTimeout(clientListAni);
    

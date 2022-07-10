@@ -21,8 +21,7 @@ header{
 }
 
 #CI_wrapper{
-  
-   width: 1400px;
+   max-width: 100%;
    margin: 0 auto;
    padding-top: 25px;
 }
@@ -30,7 +29,7 @@ header{
 
 .banner_wrapper{
    height: 100%;
-   width: 1400px;
+   max-width: 1400px;
    margin: 0 auto;
    position: relative;
 }
@@ -193,7 +192,7 @@ h2{
    }
 }
 
-
+/* 제일 작은 화면일때 */
 @media  (max-width:940px) {
    /* header  부분 */
    #CI_wrapper{
@@ -295,7 +294,9 @@ h2{
 
 
 @media  (min-width:941px) and (max-width:1217px) {
-
+   #CI_wrapper{
+      max-width: 1200px;
+   }
    .banner_img_wrapper{
       right: 3%;
    }
