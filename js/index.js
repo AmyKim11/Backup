@@ -1,4 +1,4 @@
-
+let windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 let clientsImg = document.querySelectorAll(".client_CI");
 let clientImgWrap = document.querySelector("ul"); 
 let plusButton = document.querySelector(".button");  
@@ -101,11 +101,12 @@ function  clientsImagesClass () {
    let sNum2 = [12, 27];   
    const clientListAni = ()=> {
     
-      if(window.innerWidth > 1218 ){
+      if(windowWidth > 1218 ){
          clientsImagesClass();
          plusButton.style.display = 'none';
          startAni = false;
-      } else if(window.innerWidth >= 941 && window.innerWidth <= 1218){
+         console.log(windowWidth);
+      } else if(windowWidth >= 941 && windowWidth <= 1218){
          width1217();
          // console.log(clientsImg[26]);
          // if(clientsImg[26].style.opacity == 1){
@@ -119,12 +120,14 @@ function  clientsImagesClass () {
         
          buttonClickWidth1218(NONE, sNum1[0], sNum1[1]);
          // width940();
+         console.log(windowWidth);
       
-      } else if(window.innerWidth < 941){
+      } else if(windowWidth < 941){
          width940();
       
          startAni = false;
          buttonClickWidth1218(NONE, sNum2[0], sNum2[1]);
+         console.log(windowWidth);
       }
    }
 
@@ -134,6 +137,7 @@ function  clientsImagesClass () {
   
   
    clientListAni();
+   window.addEventListener("resize", clientListAni);
 
    
 
