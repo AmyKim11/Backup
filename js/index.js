@@ -182,5 +182,6 @@ function  clientsImagesClass () {
    // window.addEventListener("resize", clientListAni);
    // plusButton.removeEventListener("click", clickButtonEvent);
    // window.addEventListener("resize", resizeMiddle);
+
    window.clearTimeout(clientListAni);
    
