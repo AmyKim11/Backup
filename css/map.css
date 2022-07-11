@@ -7,7 +7,6 @@
 
 .map-wrap{
     margin: 200px 200px;
-    margin-left: 200px;
     display: flex;
     gap: 90px;
 }
@@ -33,11 +32,9 @@
 }
 
 .info{
-    display: flex;
     gap: 35px;
     flex-direction: column;
     font-size: 18px;
-    margin-top: 75px;
     color: gray;
 }
 
@@ -60,11 +57,16 @@
 }
 @media screen and (max-width: 640px){
     .info {
+        display: flex;
         width: 90% !important;
         flex-wrap: wrap;
         flex-direction: row;
         margin: 0;
         gap: 0;
+    }
+    .info div{
+        width: 100px;
+        
     }
 }
 @media screen and (max-width: 1300px){
