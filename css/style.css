@@ -13,7 +13,7 @@
 header{
    background: url('../img/헤더배경.png') no-repeat;
    width: 100%;
-   height: 840px;
+   height: 830px;
    z-index: 90;
    position: relative;
    background-size: cover;
@@ -21,7 +21,7 @@ header{
 }
 
 #CI_wrapper{
-   max-width: 100%;
+   max-width: 1400px;
    margin: 0 auto;
    padding-top: 25px;
 }
@@ -36,7 +36,7 @@ header{
 .banner_text_wrapper{
    position: absolute;
    top: 25%;
-   color: #DDDD;
+   color: #dddddd;
 }
 
 
@@ -130,7 +130,7 @@ h2{
    flex-direction: column;
    align-items: center;
    opacity: 0;
-   /* transition-duration: 1.2s; */
+   transition-duration: 1.2s;
 }
 
 
@@ -164,37 +164,60 @@ h2{
    /* display: none; */
 }
 
-@media (max-width:640px) {
-   /* banner  */
+/* 중간화면 ~ 큰화면일때 */
+@media  (min-width:941px) and (max-width:1217px) {
+   #CI_wrapper{
+      max-width: 1200px;
+   }
+
+   .banner_text_wrapper p:first-child {
+      font-size: 45px;
+   }
    .banner_img_wrapper{
-      width: 400px;
-   }
-   .footer_wrapper{
-      padding: 40px;
-      flex-direction: column;
+      top: 11%;
+      right: 3%;
    }
 
+   .banner_img_wrapper img{
+      width: 580px;
+   }
+    /* 기업목록(고객사) */
+   .CI_Big{
+      padding-left: 5%;
+   }
+   .CI_Big img{
+      width: 50%;
+   }
+
+   .client_img_wrapper ul{
+      margin: 0 5%;
+   }
+
+   .client_img_wrapper ul li{
+      width: calc(100% / 8);
+   }
+
+   .client_CI_wrap{
+      width: 10vw;
+      height: 10vw;
+   }
+   
+   .banner_text_wrapper p:last-child span:nth-child(2),
+   .banner_text_wrapper p:last-child span:last-child span:last-child {display: block;}
+   
+   .button i{
+      font-size: 70px;
+      display: initial;
+   }
    .footer_wrapper .img_wrapper{
-      text-align: center;
-      margin-bottom: 20px;
-   }
-
-   .footer_wrapper .img_wrapper img{
-      width: 40%;
-      float: none;
-   }
-
-   .footer_contents .footer_con_title{
-      font-size: 16px;
-   }
-
-   .footer_info p{
-      font-size: 14px;
+      margin-left: 0px;
    }
 }
 
-/* 제일 작은 화면일때 */
+
+/* 중간 화면일때 */
 @media  (max-width:940px) {
+
    /* header  부분 */
    #CI_wrapper{
       height: 80px;
@@ -203,15 +226,19 @@ h2{
    #CI_wrapper img{
      width: 149px;
    }
-
-   .banner_wrapper{
+   header{
+      background: url("../img/헤더배경940.png") no-repeat;
+      background-position-x: right;
+   }
+   /* .banner_wrapper{
       display: flex;
       flex-direction: column;
-   }
+   } */
    .banner_text_wrapper{
       top: 45%;
-      left: 5%;
+      /* left: 5%; */
       padding-bottom: 50px;
+      left: calc(50% - 261.5px);
    }
 
    .banner_text_wrapper p:first-child{
@@ -227,13 +254,16 @@ h2{
  
    
    .banner_img_wrapper{
-      left: 20%;
+      left: 50%;
       right: 0;
       top: 0;
       transform: translateX(-50%);
       width: 500px;
    }
 
+   .banner_img_wrapper img{
+      width: 100%;
+   }
  
 
    /* 기업목록(고객사) */
@@ -292,49 +322,45 @@ h2{
    }
 }
 
-
-
-@media  (min-width:941px) and (max-width:1217px) {
-   #CI_wrapper{
-      max-width: 1200px;
+/* 제일 작은 화면일때 */
+@media (max-width:640px) {
+   /* header */
+   header{
+      height: 800px;
    }
+   /* banner  */
    .banner_img_wrapper{
-      right: 3%;
+      width: 400px;
    }
-
    .banner_img_wrapper img{
-      width: 580px;
-   }
-    /* 기업목록(고객사) */
-   .CI_Big{
-      padding-left: 5%;
-   }
-   .CI_Big img{
-      width: 50%;
+      width: 100%;
    }
 
-   .client_img_wrapper ul{
-      margin: 0 5%;
+   /* footer 부분 */
+   .footer_wrapper{
+      padding: 40px;
+      flex-direction: column;
    }
 
-   .client_img_wrapper ul li{
-      width: calc(100% / 8);
-   }
-
-   .client_CI_wrap{
-      width: 10vw;
-      height: 10vw;
-   }
-   
-   
-   .button i{
-      font-size: 70px;
-      display: initial;
-   }
    .footer_wrapper .img_wrapper{
-      margin-left: 0px;
+      text-align: center;
+      margin-bottom: 20px;
+   }
+
+   .footer_wrapper .img_wrapper img{
+      width: 40%;
+      float: none;
+   }
+
+   .footer_contents .footer_con_title{
+      font-size: 16px;
+   }
+
+   .footer_info p{
+      font-size: 14px;
    }
 }
+
 
 /* ------------footer 부분------------ */
 .footer_wrapper{

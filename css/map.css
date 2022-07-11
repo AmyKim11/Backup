@@ -2,6 +2,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .map-wrap{
@@ -53,16 +54,17 @@
 
 @media screen and (max-width: 430px){
     .info {
+        margin-left: 0px;
         flex-direction: column;
     }
 }
 @media screen and (max-width: 640px){
     .info {
+        width: 90% !important;
         flex-wrap: wrap;
         flex-direction: row;
         margin: 0;
         gap: 0;
-        width: 90%;
     }
 }
 @media screen and (max-width: 1300px){

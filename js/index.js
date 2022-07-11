@@ -21,7 +21,7 @@ function  clientsImagesClass () {
    // setTimeout(() => {
    //    clientsImagesClass(clientsImg[i], clientImgWrap);
    // }, i*1000);
-
+      
       let v = 8;
       for (let i = 0; i < clientsImg.length; i++) {
          
