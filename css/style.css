@@ -189,6 +189,10 @@ h2{
       width: 50%;
    }
 
+   .client_img_wrapper{
+      position: relative;
+   }
+
    .client_img_wrapper ul{
       margin: 0 5%;
    }
@@ -205,6 +209,11 @@ h2{
    .banner_text_wrapper p:last-child span:nth-child(2),
    .banner_text_wrapper p:last-child span:last-child span:last-child {display: block;}
    
+   .button{
+      position: absolute;
+      left: 47%;
+      bottom: 20%;
+   }
    .button i{
       font-size: 70px;
       display: initial;
@@ -220,8 +229,8 @@ h2{
 
    /* header  부분 */
    #CI_wrapper{
-      height: 80px;
-      padding-left: 5%;
+      height: 60px;
+      padding: 16px;
    }
    #CI_wrapper img{
      width: 149px;
@@ -277,7 +286,7 @@ h2{
    }
 
    .client_img_wrapper{
-      margin: 130px auto;
+      position: relative;
    }
    .client_img_wrapper ul{
       max-width: 500px;
@@ -293,7 +302,11 @@ h2{
       width: 110px;
       height: 110px;
    }
-
+   .button{
+      position: absolute;
+      left: 45%;
+      bottom: 50%;
+   }
    .button i{
       font-size: 70px;
       /* display: initial; */
@@ -368,13 +381,33 @@ h2{
    width: 22vw;
    height: 22vw;
   }
+
 }
 
 @media (max-width:430px) {
+   header{
+      height: 640px;
+   }
    .client_CI_wrap img{
       padding: 12px;
    }
-   
+   .banner_img_wrapper{
+      /* left: 30%; */
+      width: 300px;
+   }
+   .banner_text_wrapper{
+      padding-bottom: 25px;
+      left: calc(50% - 145.5px);
+   }
+   .banner_text_wrapper p:first-child{
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 22px;
+   }
+   .banner_text_con{
+      line-height: 17px;
+      font-size: 15px;
+   }
 }
 
 /* ------------footer 부분------------ */

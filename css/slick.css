@@ -1,10 +1,3 @@
-p{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
 .wrap{
     width: 1440px;
     height: 400px;
@@ -39,6 +32,7 @@ p{
     font-weight: 600;
     letter-spacing: -0.4px;
     line-height: 1.5;
+    margin-top: 1.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
 }
