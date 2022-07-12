@@ -7,9 +7,7 @@ a {
     color: #000;
 }
 
-/* 아래 p태그가 'p'라고만 되어 있어 다른 파트 스타일에도 영향을 주어
-부모태그를 추가함 */
-.flip p {
+p {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
