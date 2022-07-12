@@ -322,6 +322,8 @@ h2{
    }
 }
 
+
+
 /* 제일 작은 화면일때 */
 @media (max-width:640px) {
    /* header */
@@ -361,6 +363,19 @@ h2{
    }
 }
 
+@media (max-width:500px) {
+  .client_CI_wrap{
+   width: 22vw;
+   height: 22vw;
+  }
+}
+
+@media (max-width:430px) {
+   .client_CI_wrap img{
+      padding: 12px;
+   }
+   
+}
 
 /* ------------footer 부분------------ */
 .footer_wrapper{
