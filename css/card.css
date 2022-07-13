@@ -1,37 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+ /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');  
 
-* {
+ *{
     box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
+    padding: 0;
+    margin: 0;
+} */
+
+
+.flip {
+    display: block;
 }
 
-a {
+.flip-item a {
     text-decoration: none;
     color: #000;
 }
 
 .flip p {
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+    /* margin-block-start: 1em; */
+    /* margin-block-end: 1em; */
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
 
-.b_wrap {
+/* .b_wrap { 
     max-width: 1550px;
     margin: 0 auto;
     margin-top: 0px;
     margin-right: auto;
     margin-bottom: 0px;
-    margin-left: auto;
-    padding: 200px 0;
+    margin-left: auto; 
+    padding: 200px 0; 
     overflow: hidden;
-}
+    line-height: 1;
+} */
 
 .b_wrap .busi_content_wrap {
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 200px auto;
 }
 
 .back.flip-item {
@@ -51,6 +59,7 @@ a {
 .b_wrap .business_list {
     width: 100%;
     display: flex;
+    list-style: none;
 }
 
 .b_wrap .business_list .flip {
@@ -151,6 +160,14 @@ a {
     height: 185px;
 }
 
+.b_wrap .business_list li a .img_wrap img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+}
+
 .subTitleEng {
     text-transform: uppercase;
     text-align: center;
@@ -160,18 +177,71 @@ a {
     letter-spacing: 3px;
 }
 
-div {
-    display: block;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-br {
+.app-text br {
     opacity: 0;
 }
 
-@media  (max-width:940px) {
-    
+@media screen and (min-width: 1217px) and (max-width: 1720px) {
+    .b_wrap{
+    max-width: 1550px;
+    margin:0 auto;
+    }
 }
+
+@media screen and (max-width:940px) {   
+    .b_wrap {
+        padding: 100px 0;
+    }
+    .b_wrap .business_list {
+    flex-wrap: wrap;
+    }
+    .b_wrap .business_list .flip {
+        width: calc(100% / 2 - 4%);
+        margin : 2%;
+        height: 300px;
+    }
+    .b_wrap .busi_content_wrap{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .b_wrap {
+        max-width: 100%;
+        margin: 0 auto;
+        height: auto;
+        padding: 60px 0;
+    }
+    .b_wrap .busi_content_wrap {
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .b_wrap .business_list .flip {
+        height: 250px;
+    }
+    .b_wrap .business_list li a .img_wrap {
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .b_wrap .business_list .flip {
+        width: 100%;
+        height: 250px;
+    }
+    .b_wrap .business_list li a .title {
+        font-size: 20px;
+    }
+    .b_wrap .busi_content_wrap .flip:first-child li img {
+        width: 130px !important;
+
+    }
+    .subTitleEng {
+        font-size: 14px;
+    }
+}
+
+
+

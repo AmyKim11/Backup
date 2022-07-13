@@ -11,27 +11,8 @@
     gap: 90px;
 }
 
-@media screen and (max-width: 640px){
-    .map-wrap {
-        flex-direction: column-reverse;
-        margin: 0;
-        margin-bottom: 300px;
-        align-items: center;
-    }
-}
-@media screen and (max-width: 940px){
-    .map-wrap {
-        gap: 50px;
-    }
-}
-@media screen and (max-width: 1300px){
-    .map-wrap {
-        gap: 50px;
-        margin: 200px 50px;
-    }
-}
-
 .info{
+    margin-top: 75px;
     gap: 35px;
     flex-direction: column;
     font-size: 18px;
@@ -39,8 +20,7 @@
 }
 
 .info div{
-    margin-left: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .info p:first-child{
@@ -49,41 +29,24 @@
     color: black;
 }
 
-@media screen and (max-width: 430px){
-    .info {
-        margin-left: 0px;
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 640px){
-    .info {
-        display: flex;
-        width: 90% !important;
-        flex-wrap: wrap;
-        flex-direction: row;
-        margin: 0;
-        gap: 0;
-    }
-    .info div{
-        width: 100px;
-        
-    }
-}
-@media screen and (max-width: 1300px){
-    .info {
-        width: 40%;
-    }
-}
 #map{
     width: 65%;
     height: 45vw;
     max-width: 1400px;
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 1300px){
+    .map-wrap {
+        gap: 50px;
+        margin: 200px 50px;
+    }
+
+    .info {
+        width: 40%;
+    }
+
     #map {
-        width: 90%;
-        height: 600px;
+        height: 585px;
     }
 }
 
@@ -93,10 +56,57 @@
     }
 }
 
-@media screen and (max-width: 1300px)
-{
-    #map {
-        height: 585px;
+@media screen and (max-width: 940px){
+    .map-wrap {
+        gap: 50px;
     }
 }
+
+@media screen and (max-width: 640px){
+    .map-wrap {
+        flex-direction: column-reverse;
+        margin: 0 0 200px 0;
+        margin-bottom: 300px;
+        align-items: center;
+    }
+
+    .info {
+        display: flex;
+        width: 90%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0;
+        gap: 0;
+    }
+
+    .info div{
+        margin-left: 0;
+        width: 50%;
+    }
+
+    .info div p:last-child{
+        font-size: 15px;
+    }
+
+    #map {
+        width: 90% ;
+        height: 600px ;
+    }
+}
+@media screen and (max-width: 430px){
+    .info {
+        margin-left: 0px;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
